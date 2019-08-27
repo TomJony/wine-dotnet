@@ -5,7 +5,7 @@ RUN set -x \
   && wget -nc https://dl.winehq.org/wine-builds/winehq.key \
   && apt-key add winehq.key \
   && echo 'deb https://dl.winehq.org/wine-builds/ubuntu/ bionic main' > /etc/apt/sources.list.d/wine.list \
-  && apt update && apt install --install-recommends winehq-stable \
+  && apt update && apt install -y --install-recommends winehq-stable \
   && wget 'https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks' -O /usr/bin/winetricks \
   && chmod +x /usr/bin/winetricks
 
